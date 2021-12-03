@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: #F5F5F5; }
+    .attribution a { color: hsl(236, 100%, 87%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <div class="user-header">
+        <img src="images/image-jeremy.png" alt="Jeremy">
+        <div class="user-name">
+          <p>Report for</p>
+          <p>Jeremy Robson</p>
+        </div>
+      </div>
+      <div class="user-body">
+        <a id="daily" href="javascript:void(0);" onClick="updateView('daily')">Daily</a>
+        <a id="weekly" href="javascript:void(0);" onClick="updateView('weekly')">Weekly</a>
+        <a id="monthly" href="javascript:void(0);" onClick="updateView('monthly')">Monthly</a>
+      </div>
+    </div>
+
+    <div id="work">
+      <div class="card-header">
+        <!--work header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Work</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+
+    <div id="play">
+      <div class="card-header">
+        <!--play header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Play</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+
+    <div id="study">
+      <div class="card-header">
+        <!--study header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Study</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+
+    <div id="exercise">
+      <div class="card-header">
+        <!--exercise header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Exercise</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+
+    <div id="social">
+      <div class="card-header">
+        <!--social header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Social</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+
+    <div id="self">
+      <div class="card-header">
+        <!--self header color and icon-->
+      </div>
+      <div class="card-body">
+        <div class="title">Self Care</div>
+        <div class="ellipsis">
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="current daily"></div> <!-- daily -->
+        <div class="previous daily"></div> <!-- daily -->
+        <div class="current weekly"></div> <!-- weekly -->
+        <div class="previous weekly"></div> <!-- weekly -->
+        <div class="current monthly"></div> <!-- monthly -->
+        <div class="previous monthly"></div> <!-- monthly -->
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Joel G</a>.
+  </div>
+  <script src="functions.js"></script>
+</body>
+</html>
