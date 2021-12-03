@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](tablet.jpg?raw=true "Tablet View")
+![Design preview for the Time tracking dashboard coding challenge](tablet.jpg)
 
 ### Links
 
