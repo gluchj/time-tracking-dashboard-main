@@ -11,27 +11,27 @@ body {
 }
 
 #play > div:first-child {
-  background-image: url("/images/icon-play.svg");
+  background-image: url("images/icon-play.svg");
   background-color: hsl(195, 74%, 62%);
 }
 
 #study > div:first-child {
-  background-image: url("/images/icon-study.svg");
+  background-image: url("images/icon-study.svg");
   background-color: hsl(348, 100%, 68%);
 }
 
 #exercise > div:first-child {
-  background-image: url("/images/icon-exercise.svg");
+  background-image: url("images/icon-exercise.svg");
   background-color: hsl(145, 58%, 55%);
 }
 
 #social > div:first-child {
-  background-image: url("/images/icon-social.svg");
+  background-image: url("images/icon-social.svg");
   background-color: hsl(264, 64%, 52%);
 }
 
 #self > div:first-child {
-  background-image: url("/images/icon-self-care.svg");
+  background-image: url("images/icon-self-care.svg");
   background-color: hsl(43, 84%, 65%);
 }
 

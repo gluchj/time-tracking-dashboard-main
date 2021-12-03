@@ -6,6 +6,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -21,9 +22,13 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
+### Screenshot
+
+![](tablet.jpg?raw=true "Tablet View")
+
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://gluchj.github.io/time-tracking-dashboard-main/
 
 ### Built with
 
