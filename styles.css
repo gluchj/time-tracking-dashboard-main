@@ -6,7 +6,7 @@ body {
 }
 
 #work > div:first-child {
-  background-image: url("/images/icon-work.svg");
+  background-image: url("images/icon-work.svg");
   background-color: hsl(15, 100%, 70%);
 }
 
